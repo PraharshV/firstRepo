@@ -38,8 +38,7 @@
   
   <target name="deployCodeCheckOnly">
       <sf:deploy username="${sf.username}" 
-	  password="${sf.password}" 
-	  sessionId="${sf.sessionId}" 
+	  password="${sf.password}"
 	  serverurl="${sf.serverurl}" 
 	  maxPoll="${sf.maxPoll}" 
 	  deployRoot="src" 
