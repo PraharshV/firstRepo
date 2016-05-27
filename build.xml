@@ -26,14 +26,25 @@
   <!-- ***************************************************************************** -->
   <!-- Deploy the meta-data from code Repository to salesforce your org     -->
   <!-- ***************************************************************************** -->
-<target name="deployment"  depends="proxy">
+<!--<target name="deployment"  depends="proxy">
     <echo level="info">Performing the deploy</echo>
     <sf:deploy username="${sf.username}"
       password="${sf.password}"
       serverurl="${sf.serverurl}"
       ignoreWarnings="true"
-      deployRoot="src" />
-  </target>
+      deployRoot="src" 
+	  testLevel="RunLocalTests" />
+  </target>-->
+  
+  <target name="deployCodeCheckOnly">
+      <sf:deploy username="${sf.username}" 
+	  password="${sf.password}" 
+	  sessionId="${sf.sessionId}" 
+	  serverurl="${sf.serverurl}" 
+	  maxPoll="${sf.maxPoll}" 
+	  deployRoot="src" 
+	  checkOnly="true"/>
+    </target>
   
   <target name="proxy">
 <property name="proxy.host" value="proxy.cognizant.com" />
