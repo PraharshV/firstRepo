@@ -3,7 +3,7 @@
     <version>29.0</version>
     
     <types>
-        <members>test.cls</members>
+        <members>CABatchProcess</members>
         <name>ApexClass</name>
     </types>
 </Package>
